@@ -1,64 +1,42 @@
-```html
-&lt;!doctype html&gt;
-&lt;html lang=&quot;pt-BR&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;utf-8&quot; /&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot; /&gt;
-&lt;title&gt;Página Não Clicável — Exemplo&lt;/title&gt;
-&lt;style&gt;
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Exemplo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à minha página!</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-body {
-font-family: Arial, sans-serif;
-display: flex;
-align-items: center;
-justify-content: center;
-background: linear-gradient(135deg, #f0f4ff, #fff0f5);
-height: 100vh;
-}
-.card {
-background: white;
-border-radius: 12px;
-padding: 30px;
-box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-text-align: center;
-position: relative;
-}
-.blocker {
-position: absolute;
-inset: 0;
-background: rgba(255,255,255,0);
-pointer-events: auto;
-z-index: 10;
-}
-a, button {
-margin: 10px;
-padding: 10px 16px;
-border-radius: 6px;
-background: #f7f7f7;
-border: 1px solid #ccc;
-cursor: pointer;
-}
-.disabled-look a, .disabled-look button {
-opacity: 0.6;
-pointer-events: none;
-}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div class=&quot;card disabled-look&quot;&gt;
-&lt;h1&gt;Página não clicável&lt;/h1&gt;
-&lt;p&gt;Os links e botões abaixo não funcionam.&lt;/p&gt;
-&lt;a href=&quot;https://www.google.com&quot;&gt;Google&lt;/a&gt;
-&lt;button&gt;Botão desativado&lt;/button&gt;
-&lt;div class=&quot;blocker&quot;&gt;&lt;/div&gt;
+    <section id="home">
+        <h2>Início</h2>
+        <p>Esta é a seção inicial da página. Aqui você pode colocar conteúdo introdutório.</p>
+    </section>
 
-&lt;/div&gt;
-&lt;script&gt;
-document.addEventListener(&#39;click&#39;, e =&gt; {
-e.preventDefault();
-e.stopPropagation();
-}, true);
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-```
+    <section id="sobre">
+        <h2>Sobre</h2>
+        <p>Esta seção fala um pouco sobre o site ou sobre você.</p>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Se você quiser entrar em contato, envie uma mensagem para o e-mail: exemplo@email.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
